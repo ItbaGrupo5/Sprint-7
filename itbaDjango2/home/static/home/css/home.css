@@ -1,0 +1,199 @@
+header{
+    background-color: #CFCFCF;
+    border-bottom-width: 7px;
+    border-bottom-style: solid;
+    border-image: linear-gradient(to right, #82CA6F, #75C8F2, #9071AF, #B65CA0, #F8BE63) 1;
+}
+
+#user-photo{
+    object-fit: cover;
+}
+
+#perfil{
+        background-color: #DBC8E2;
+        border: 2px solid #9B46BB;
+}
+
+ #nombre-perfil{
+color: #9B46BB;
+}
+
+#icono-perfil{
+    color: #9B46BB;
+}
+
+*{
+    font-family: 'Chivo', sans-serif;
+}
+
+.buscador{
+    overflow: hidden;
+  width: 100%;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.buscador input#search{
+    width: 100%;
+    height: 50px;
+    border: 3px solid #DBC8E2;
+    font-size: 12pt;
+    float: left;
+    color: #252525;
+    padding-left: 15px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+  }
+
+  .buscador input#search::-webkit-input-placeholder {
+    color: #9B46BB;
+ }
+
+ .buscador button.icon-search{
+    -webkit-border-top-right-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    -moz-border-radius-topright: 5px;
+    -moz-border-radius-bottomright: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+   
+    border: none;
+    background: #DBC8E2;
+    height: 50px;
+    width: 50px;
+    color: #9B46BB;
+    opacity: 0;
+    font-size: 10pt;
+   
+    -webkit-transition: all .55s ease;
+    -moz-transition: all .55s ease;
+    -ms-transition: all .55s ease;
+    -o-transition: all .55s ease;
+    transition: all .55s ease;
+  }
+
+  .buscador:hover button.icon-search, .buscador:active button.icon-search, .buscador:focus button.iconsearch{
+    outline: none;
+    opacity: 1;
+    margin-left: -50px;
+    border: none;
+  }
+ 
+  .buscador:hover button.icon-search:hover{
+    background: #9B46BB;
+    color: white;
+  }
+
+
+.card-black{
+    background-color: #252525;
+    color: white;
+    height: 100%;
+}
+
+.card-grey{
+    background-color: #EAEAEA;
+}
+
+.saldo-cuenta{
+    color: #DA79FF;
+    font-size: 2em;
+    
+}
+
+.monto{
+    font-size: 1.5em;
+}
+
+.boton-primario{
+    background-color: #9B46BB;
+    color: white;
+    text-align: center;
+}
+
+.boton-primario:hover{
+    background-color: #652E7A;
+    color: white;
+}
+
+.boton-icono{
+    color: #9B46BB;
+    font-size: 1.5em;
+    height: 1.7em;
+    width: 1.7em;
+    display: flex;
+    align-items: center;
+}
+
+.acceso{
+
+    color: #9B46BB;
+    border: 2px solid #9B46BB;
+}
+
+.acceso i {
+    font-size: 1.5em;
+}
+
+.list-group-item{
+    background-color: #EAEAEA;
+    border-radius: 5px;
+}
+
+.list-group-item:hover{
+    background-color: #CFCFCF;
+    color: #252525;
+}
+
+.carousel-item{
+    height:28rem;
+    color: white;
+    position:relative;
+}
+.carousel-item{position:relative;
+    display:none;
+    float:center;
+    width:100%;
+    margin-right:-100%;
+    -webkit-backface-visibility:hidden;
+    backface-visibility:hidden;
+    transition:transform .6s ease-in-out}
+
+.carousel-conteiner{
+    position: center;
+    bottom:0;
+    left:0;
+    right:0;
+    padding: bottom 50px;
+    background-image: url(/Images/dolar.1.jpg);
+    align-items: center;
+}
+
+    .carousel-capt{position:absolute;
+        right: 10px;
+        left:15px;
+        padding-top:1rem;
+        padding-bottom:1rem;
+        padding-left: 20px;
+        padding-right:20px;
+        color:black;
+        text-align:center;
+    }
+
+        .carousel-photo{
+            display:flex;
+            width: 40%;
+            height: 40%;
+            border-radius:20%;
+            text-align: left;
+            margin: 0 auto;
+            object-fit: cover
+        
+        }
+
+    .carousel-int{position:sticky;
+        width:100%;
+        height:7cm;
+        background-color: rgb(216, 210, 210);
+        overflow:hidden}
