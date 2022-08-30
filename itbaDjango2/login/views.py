@@ -41,7 +41,7 @@ def registro(request):
             today = date.today()
             currentdate = today.strftime("%b-%d-%Y")
             cliente = Cliente.objects.create(
-                customer_name=nombre, customer_surname=apellido, customer_dni=cliente_id, cliente_type=random.choice(tipos), dob=curregisrentdate, branch_id=randrange(100))
+                customer_name=nombre, customer_surname=apellido, customer_dni=cliente_id, cliente_type=random.choice(tipos), dob=currentdate, branch_id=randrange(100))
             cliente.save()
             cuenta = Cuenta.objects.create(customer=cliente, balance=0, iban=0)
             cuenta.save()
