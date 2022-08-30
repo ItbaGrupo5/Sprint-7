@@ -1,0 +1,61 @@
+{% extends 'home.html' %} {% load static %} {% block title %}Iniciar sesión
+{% endblock %} {% block content %}
+<style>
+  .errorlist {
+    color: red;
+  }
+</style>
+<main role="main">
+  <div class="container">
+    <div class="row mt-3">
+      <div class="col-md-9 mx-auto mb-5">
+        <form action="" method="post">
+          {% csrf_token %}
+          <h3 class="mx-4 my-4 fs-4 mb-4" >Iniciar sesión</h3>
+          {% if form.non_field_errors %}
+
+          <p style="color: red">
+            Usuario o contraseña incorrectos, prueba de nuevo.
+          </p>
+          {% endif %}
+
+          <div class="form-floating mx-4 mt-3 mb-3">
+            <input
+              type="text"
+              name="username"
+              autofocus
+              maxlength="254"
+              required
+              id="id_username"
+              class="form-control"
+              placeholder="DNI"
+            />
+            <label for="username">DNI</label>
+          </div>
+
+          <div class="form-floating mx-4 mt-3 mb-3">
+            <input
+              type="password"
+              name="password"
+              required
+              id="id_password"
+              class="form-control"
+              placeholder="Contraseña"
+              
+            />
+            <label for="username">Contraseña</label>
+          </div>
+          <div class="m-5 text-center">
+            <input
+              type="submit"
+              class="btn rounded-5 text-light btn-lg ps-5 pe-5"
+              style="background-color: #5a407a"
+              value="Acceder"
+            />
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}

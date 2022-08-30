@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@200;300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'login/css/login.css' %}"
+      type="text/css"
+    />
+    <link rel="shortcut icon" href="./images/icologo.ico" type="image/x-icon" />
+    <title>Online Banking | ITBANK</title>
+  </head>
+  <body>
+    <header class="shadow">
+      <nav
+        class="navbar navbar-expand-lg text-dark"
+        style="background-color: #b7b7b7"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand ms-4" href="/"
+            ><img src="{% static 'login/Images/Logo.png' %}" alt="Logo ITBANK"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse me-4"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link text-dark" aria-current="page" href="#"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark" href="#">Contacto</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark" href="#">Ayuda</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link text-dark">Sobre Nosotros</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-6 disp-off">
+            <div class="container py-3">
+              <div class="ms-2 mt-5 m-3">
+                <h1 class="ms-3 pt-5 font-tam">
+                  Te damos la bienvenida <br />
+                  al home banking
+                </h1>
+                <p class="mt-4 ms-5 fs-4">Creamos valor con y para vos</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-6 mt-3 mb-3">
+            <div class="row">
+              <div class="col mt-4 mb-4 me-5 mt-5 ms-5">
+                <div
+                  class="m-3 rounded-4 shadow p-3 mb-5 rounded-4"
+                  style="background-color: #eeeeee"
+                >
+                  <div class="mx-4 my-2 disp-off-login">
+                    <ul class="nav nav-tabs nav-fill justify-content-center">
+                      <li class="nav-item">
+                        <a
+                          class="nav-link active button-js"
+                          aria-current="page"
+                          href="#"
+                          id="client"
+                          data-number="1"
+                          >Soy Cliente</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a
+                          class="nav-link button-js"
+                          href="#"
+                          id="noClient"
+                          data-number="2"
+                          >No Soy Cliente</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="mx-4 disp-off-login-2">
+                    <div class="dropdown">
+                      <a
+                        class="btn dropdown-toggle"
+                        style="background-color: #dfdfdf"
+                        href="#"
+                        role="button"
+                        id="dropdownMenuLink"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                      </a>
+
+                      <ul
+                        class="dropdown-menu"
+                        aria-labelledby="dropdownMenuLink"
+                      >
+                        <li>
+                          <a
+                            class="dropdown-item button-js"
+                            href="#"
+                            data-number="3"
+                            id="clientDrop"
+                            >Soy Cliente</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item button-js"
+                            href="#"
+                            data-number="4"
+                            id="noClientDrop"
+                            >No Soy Cliente</a
+                          >
+                          
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="form-login show no-show" data-section="1">
+                    <!-- <p class="mx-4 my-4 fs-4">Ingrese aca para operar</p> -->
+                    {% block content %} {% endblock %}
+                    <!-- <form action="">
+                
+
+                      <div class="form-floating mx-4 mt-3 mb-3">
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="floatingInput"
+                          placeholder="name@example.com"
+                        />
+                        <label for="floatingInput">Usuario</label>
+                      </div>
+                      <div class="form-floating mx-4 mt-3 mb-3">
+                        <input
+                          type="password"
+                          class="form-control"
+                          id="floatingPassword"
+                          placeholder="Password"
+                        />
+                        <label for="floatingPassword">Clave</label>
+                      </div>
+                      <div class="mx-4 mt-4 mb-3">
+                        <p class="px-2 py-4" style="background-color: #c9c9c9">
+                          Los datos de cuenta, Token de seguridad, los datos de
+                          tu tarjeta de coordenadas y tus claves personales. ¡No
+                          los compartas! Conocé más consejos de seguridad
+                        </p>
+                      </div>
+                      <div class="m-5 text-center">
+                        <a
+                          class="btn rounded-5 text-light btn-lg ps-5 pe-5"
+                          style="background-color: #5a407a"
+                          href="./cargaAHome.html"
+                          role="button"
+                          >Ingresar</a
+                        >
+                      </div>
+                    </form> -->
+                    <div class="m-2">
+                      <!-- <p class="text-center">
+                        ¿No tenés tu clave Santander?, <br />
+                        ¿No recordás tu clave y/o usuario? <br />
+                        <a href="{% url 'registro' %}" >Ingresá para obtener uno nuevo</a>
+                        <p><a href="{% url 'registro' %}">Registrese</a></p>
+
+                      </p> -->
+                    </div>
+                  </div>
+                  <div class="form-login no-show" data-section="2">
+                    <div class="text-center my-4">
+                      <span class="fs-5"
+                        ><strong>Abri tu cuenta totalmente</strong></span
+                      >
+                      <br />
+                      <span class="fs-5"
+                        ><strong>de forma 100% digital.</strong></span
+                      >
+                      <br />
+                      <p class="mx-4 my-2">
+                        Conoce todo lo que te ofrecemos en ITBANK
+                      </p>
+                    </div>
+                    <div class="mx-4 my-4 fs-4 text-center">
+                      <div class="mx-4 my-4">
+                        <div class="mx-4 my-3 text-center">
+                          <div class="">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="45"
+                              height="45"
+                              fill="#9B46BB"
+                              class="bi bi-credit-card-2-back-fill"
+                              viewBox="0 0 16 16"
+                              class="icons"
+                            >
+                              <path
+                                d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v5H0V4zm11.5 1a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-2zM0 11v1a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-1H0z"
+                              />
+                            </svg>
+                          </div>
+                          <p class="fs-5">Tarjeta de Debito</p>
+                        </div>
+                        <div class="mx-4 my-3 text-center">
+                          <div class="">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="45"
+                              height="45"
+                              fill="#9B46BB"
+                              class="bi bi-arrow-down-up"
+                              viewBox="0 0 16 16"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                d="M11.5 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L11 2.707V14.5a.5.5 0 0 0 .5.5zm-7-14a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V1.5a.5.5 0 0 1 .5-.5z"
+                              />
+                            </svg>
+                          </div>
+                          <p class="fs-5">Movimientos limitados</p>
+                        </div>
+                        <div class="mx-4 my-3 text-center">
+                          <div class="">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="45"
+                              height="45"
+                              fill="#9B46BB"
+                              class="bi bi-wallet2"
+                              viewBox="0 0 16 16"
+                            >
+                              <path
+                                d="M12.136.326A1.5 1.5 0 0 1 14 1.78V3h.5A1.5 1.5 0 0 1 16 4.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 13.5v-9a1.5 1.5 0 0 1 1.432-1.499L12.136.326zM5.562 3H13V1.78a.5.5 0 0 0-.621-.484L5.562 3zM1.5 4a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"
+                              />
+                            </svg>
+                          </div>
+                          <p class="fs-5">Pagos de servicios</p>
+                        </div>
+                      </div>
+                      <div class="mx-5 description">
+                        <span class="m-1 fs-5"
+                          >Usando tu Cuenta ¡no pagas el mantenimiento!</span
+                        >
+                        <p class="fs-6">
+                          Disfruta de 6 meses sin cargo si cumplis con alguna de
+                          nuestras condiciones
+                        </p>
+                      </div>
+                      <div class="my-4">
+                        <a
+                          class="btn rounded-5 text-light btn-lg ps-5 pe-5"
+                          style="background-color: #5a407a"
+                          href="{% url 'registro' %}"
+                          role="button"
+                          >Registrese</a
+                        >
+                      </div>
+                    </div>
+                    <!-- <div class="rec text-center">
+                      <span
+                        >"Si no tenes u olvidaste tu clave y/o usuario"</span
+                      >
+                      <br />
+                      <a href="./index-contrasena.html" role="button"
+                        >Crear clave y usuario</a
+                      >
+                      <br />
+                      <span>"Si solo tenes clave"</span>
+                      <br />
+                      <a href="./index-contrasena.html" role="button"
+                        >Crear usuario</a
+                      >
+                      <br />
+                    </div> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div
+      class="container-fluid footer-position"
+      style="background-color: #d7d7d7; opacity: 0.7"
+    >
+      <footer
+        class="d-flex flex-wrap justify-content-between align-items-center mt-2 no-margin"
+      >
+        <p class="col-md-4 mb-0">&copy; 2022 ITBANK, Inc</p>
+        <ul class="nav col-md-4 justify-content-end">
+          <li class="nav-item">
+            <a href="#" class="nav-link px-2 text-muted"
+              ><img class="img-storee" src="{% static 'login/Images/PlayStore.svg' %}"
+            /></a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link px-2 text-muted"
+              ><img class="img-store" src="{% static 'login/Images/Apple Store.svg' %}"
+            /></a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+    <script src="{% static 'login/js/app.js' %}"></script>
+  </body>
+</html>
